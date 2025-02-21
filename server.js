@@ -8,7 +8,6 @@ app.post('/webhook', (req, res) => {
     res.status(200).json({ message: 'Webhook recibido con éxito' });
 });
 
-// Usar el puerto dinámico asignado por Render
+// Asegurarse de usar el puerto correcto asignado por Render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor webhook corriendo en puerto ${PORT}`));
-
